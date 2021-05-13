@@ -21,11 +21,12 @@ header {
     /* fixar header na tela */
     position: fixed;
     width: 100%;
-    background-color: #FFF;
+    background-color: #fff;
+    /* projeta o elemento a frente dos outros */
     z-index: 3;
+    /* posicionamento */
     top: 0;
     left: 0;
-
 }
 
 header .container {
@@ -163,61 +164,57 @@ main section.styles article h3 {
 }
 
 section.contato h2 {
-text-align: center;
-font-size: 40px;
-
+    text-align: center;
+    font-size: 40px;
 }
 
-section.contato form {
+form {
     width: 500px;
     max-width: 100%;
     margin: 40px auto;
 }
 
-section.contato form input,
-section.contato form textarea {
+form input:not([type='radio']):not([type='checkbox']),
+form textarea,
+form select {
     width: 100%;
     padding: 5px;
     resize: none;
+    border-radius: 5px;
     margin-bottom: 15px;
 }
 
-section.contato form button {
+form fieldset {
+    margin: 10px 0;
+}
+
+form button {
     width: 100%;
     padding: 5px;
     font-size: 16px;
     background-color: #DC9730;
     color: #fff;
-    border: nome;
+    border: none;
     text-transform: uppercase;
     border-radius: 20px;
-    font-family: 'Ropa Sans' , sans-serif;
+    font-family: 'Ropa Sans', sans-serif;
     cursor: pointer;
-
 }
 
-section.contato form button:hover {
-background-color:  #51D275;
-
-
+form button:hover {
+    background-color: #51D275;
 }
-
-
-
 
 footer {
-
-background-color: #333333;
-color: #ffffff;
-padding: 50px;
-display: flex;
-justify-content: space-around;
-
+    background-color: #333333;
+    color: #ffffff;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
 }
 
 footer a:any-link {
-color: #ffffff;
-
+    color: #ffffff;
 }
 
 footer iframe {
@@ -226,45 +223,40 @@ footer iframe {
     max-width: 100%;
 }
 
-
-.main-form{
-padding:  100px 0;
-
+.main-form {
+    padding: 100px 0;
+    text-align: center;
 }
 
+/* estilo de botão para <button> ou <a> */
 .btn-primary {
-background-color: #DC9730;
-color: #FFF;
-text-decoration: none;
-display: inline-block;
-padding: 5px 15px;
-border-radius: 20px;
-
+    background-color: #DC9730;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
 }
 
 @media (max-width: 900px) {
-.container  {
-padding: 0 40px;
+    .container {
+        padding: 0 40px;
+    }
 
-}
+    main section.projects .container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
-main section.projects .container {
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-main section.projects .container article {
-margin: 20px 0;
-
-}
-
+    main section.projects .container article {
+        margin: 20px 0;
+    }
 }
 
 @media (max-width: 740px) {
     footer {
-flex-wrap;
-flex-direction: column;
-align-items: center;
-
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
     }
 }
